@@ -8,8 +8,8 @@ firebase.initializeApp({
   })
 
 
-// on submit
-$('form').submit((e) => {
+// login submit
+$('form.login').submit((e) => {
    var email = $('input[type="email"]').val()
    var password = $('input[type="password"]').val()
 
@@ -25,6 +25,16 @@ $('form').submit((e) => {
 
 })
 
+// register button
+$('.register-btn').click( (e) => {
+
+})
+
+
+// register new user
+$('form.register').submit( (e) => {
+
+})
 
 // logout button
 $('.logout-btn').click( (e) => {
@@ -32,6 +42,18 @@ $('.logout-btn').click( (e) => {
    firebase
       .auth()
       .signOut()
+})
+
+// send data
+$('.main-page form').submit((e) => {
+   var task = $('.main-page form input[type="text"]').val()
+   var uid = firebase.auth().currentUser.uid
+   $.post(
+      `https://c17-jquery-auth-4f244.firebaseio.com/${uid}.json`,
+      JSON.stringify({ task: task })
+   ).then(console.log)
+
+   e.preventDefault()
 })
 
 
