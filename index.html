@@ -3,11 +3,38 @@
 <head>
    <meta charset="UTF-8">
    <title>Learning FireBase Auth</title>
-   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+   <!-- <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css"> -->
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
    <h1>No big deal</h1>
 
+   <section class="container row logIn">
+      <form action="login.php" autocomplete="on" class="col-md-offset-4 col-sm-offset-5">
+           <h1>Log in</h1>
+           <p>
+               <label for="username" class="uname" data-icon="u" >Email:</label>
+               <input id="username" name="username" required="required" type="email" placeholder="Email"/>
+           </p>
+           <p>
+               <label for="password" class="youpasswd" data-icon="p">Password:</label>
+               <input id="password" name="password" required="required" type="password" placeholder="Password" />
+           </p>
+           <p class="keeplogin">
+               <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
+               <label for="loginkeeping">Keep me logged in</label>
+           </p>
+           <p class="login button">
+               <input type="submit" value="Login" />
+           </p>
+      </form>
+   </section>
+
+   <div class="main-page hidden">
+      <h1>Welcome</h1>
+   </div>
+
    <script src="/bower_components/jquery/dist/jquery.js"></script>
+   <script src="main.js"></script>
 </body>
 </html>
