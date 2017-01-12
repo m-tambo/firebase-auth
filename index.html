@@ -7,10 +7,16 @@
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <h1>No big deal</h1>
+   <h1 class="text-center">Firebase Authentication</h1>
+   <br />
+   <hr />
+   <br />
+   <br />
 
-   <section class="container row logIn">
-      <form action="login.php" autocomplete="on" class="col-md-offset-4 col-sm-offset-5">
+<!-- col-md-offset-4 col-sm-offset-4 col-xs-offset-5 -->
+
+   <section class="container row logIn hidden">
+      <form action="login.php" autocomplete="on" class="text-center">
            <h1>Log in</h1>
            <p>
                <label for="username" class="uname" data-icon="u" >Email:</label>
@@ -25,13 +31,14 @@
                <label for="loginkeeping">Keep me logged in</label>
            </p>
            <p class="login button">
-               <input type="submit" value="Login" />
+               <input class="btn btn-large login-btn" type="submit" value="Login" />
            </p>
       </form>
    </section>
 
-   <div class="main-page hidden">
-      <h1>Welcome</h1>
+   <div class="main-page hidden text-center">
+      <h1 class="text-center">Welcome</h1>
+         <input class="btn btn-large logout-btn" type="submit" value="Logout" />
    </div>
 
    <script src="/bower_components/jquery/dist/jquery.js"></script>
